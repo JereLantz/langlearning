@@ -4,8 +4,8 @@
 
 # frontend
 
-- Etusivu jossa listaus tallennetuista lessoneista
-- Add new lesson sivu
+- etusivulla näkyy tallennetut lessonit jossa on uusia sanoja.
+- all lessions sivu jossa näkyy kaikki. ja muokkaus?
 
 ## Database
 
