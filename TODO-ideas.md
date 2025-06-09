@@ -2,17 +2,18 @@
 
 - Selvitä miten youtubesta saa tekstitykset api:N kautta.
 
-# frontend
-
-- etusivulla näkyy tallennetut lessonit jossa on uusia sanoja.
-- all lessions sivu jossa näkyy kaikki. ja muokkaus?
-
 ## Database
 
 - saved_words taulu johon tallennetaan
    - id, sana, käännös, learning level (vaikka 1-4)
 - lessons taulu jossa on:
    - id, blob jossa säilötään teksti?
+
+# frontend
+
+- etusivulla näkyy tallennetut lessonit jossa on uusia sanoja.
+- all lessions sivu jossa näkyy kaikki. ja muokkaus?
+- Mahdollisuus upata joku teksti/tekstitys tiedostoja?
 
 # Display
 

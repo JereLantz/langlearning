@@ -29,7 +29,7 @@ func NewLessonForm() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<div><input name=\"newLessionTitle\" type=\"text\" id=\"newLessionTitle\" placeholder=\"Title\"><p>Kielen valinta jotenkin</p><textarea name=\"lessonTextArea\"></textarea><p>tai tiedoston uppaus mahdollisuus</p></div>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<div><form hx-post=\"/api/newlesson\"><input name=\"newLessionTitle\" type=\"text\" id=\"newLessionTitle\" placeholder=\"Title\" required><br><input name=\"newLessonLanguage\" id=\"newLessonLanguage\" placeholder=\"Language\" required><br><textarea name=\"lessonTextArea\" cols=\"80\" rows=\"20\" placeholder=\"Lesson text\" required></textarea><br><button>Add lesson</button></form></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

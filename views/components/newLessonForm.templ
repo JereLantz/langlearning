@@ -1,11 +1,16 @@
 package components
 
 templ NewLessonForm(){
-    //TODO:
     <div>
-        <input name="newLessionTitle" type="text" id="newLessionTitle" placeholder="Title" />
-        <p>Kielen valinta jotenkin</p>
-        <textarea name="lessonTextArea"></textarea>
-        <p>tai tiedoston uppaus mahdollisuus</p>
+        <form hx-post="/api/newlesson">
+            <input name="newLessionTitle" type="text" id="newLessionTitle" placeholder="Title" required />
+            <br/>
+            <input name="newLessonLanguage" id="newLessonLanguage" placeholder="Language" required/>
+            <br/>
+            <textarea name="lessonTextArea" cols="80" rows="20" placeholder="Lesson text" required ></textarea>
+            <br/>
+            //TODO: mahdollisuus upata tiedosto?
+            <button>Add lesson</button>
+        </form>
     </div>
 }
