@@ -18,7 +18,7 @@ templ NewLessonForm(savedLanguages []string){
                         }
                     </select>
 
-                    <button type="button" hx-post="/api/newlanguageform" hx-target="closest span" hx-swap="outerhtml" >Add another language</button>
+                    <button type="button" hx-post="/api/newlanguageform" hx-target="closest span" hx-swap="outerhtml" hx-params="none">Add another language</button>
                 </span>
             }
 

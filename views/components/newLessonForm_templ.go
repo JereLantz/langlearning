@@ -75,7 +75,7 @@ func NewLessonForm(savedLanguages []string) templ.Component {
 					return templ_7745c5c3_Err
 				}
 			}
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 6, "</select> <button type=\"button\" hx-post=\"/api/newlanguageform\" hx-target=\"closest span\" hx-swap=\"outerhtml\">Add another language</button></span>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 6, "</select> <button type=\"button\" hx-post=\"/api/newlanguageform\" hx-target=\"closest span\" hx-swap=\"outerhtml\" hx-params=\"none\">Add another language</button></span>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
