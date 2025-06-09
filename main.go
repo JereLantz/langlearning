@@ -149,6 +149,8 @@ func main(){
 	//pages
 	handler.HandleFunc("GET /", handleServeHomepage)
 	handler.HandleFunc("GET /newlesson", handlers.HandleServeNewLessonPage)
+	handler.HandleFunc("GET /savedlessons", handlers.HandleServeLessonsPage)
+	handler.HandleFunc("GET /savedwords", handlers.HandleServeSavedWordsPage)
 
 	//API
 	handler.HandleFunc("POST /api/newlanguageform", handlers.HandleNewLangForm)

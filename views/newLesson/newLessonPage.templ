@@ -5,6 +5,7 @@ import "langLearning/views/components"
 
 templ NewLessonPage(savedLanguages []string){
     @layouts.Base(){
+        <h2>Create a new lesson</h2>
         @components.NewLessonForm(savedLanguages)
     }
 }

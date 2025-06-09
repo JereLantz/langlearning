@@ -1,0 +1,12 @@
+package lessons
+
+import "langLearning/views/layouts"
+
+templ LessonsPage() {
+    @layouts.Base(){
+        <h2>Saved lessons:</h2>
+        <div id="savedLessonDisplay">
+            <p>No saved lessons found</p>
+        </div>
+    }
+}

@@ -29,7 +29,7 @@ func Header() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<header><h1><a href=\"/\">Learn languages</a></h1><menu><a href=\"/\">Home</a> <a href=\"/savedlessons\">Lessons</a> <a href=\"/newlesson\">Add new lesson</a> <a href=\"/saved\">Saved words and phrases</a></menu></header>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<header><h1><a href=\"/\">Learn languages</a></h1><menu><a href=\"/\">Home</a> <a href=\"/savedlessons\">Lessons</a> <a href=\"/newlesson\">Add new lesson</a> <a href=\"/savedwords\">Saved words</a></menu></header>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
