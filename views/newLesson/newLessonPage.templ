@@ -3,8 +3,8 @@ package newlesson
 import "langLearning/views/layouts"
 import "langLearning/views/components"
 
-templ NewLessonPage(){
+templ NewLessonPage(savedLanguages []string){
     @layouts.Base(){
-        @components.NewLessonForm()
+        @components.NewLessonForm(savedLanguages)
     }
 }

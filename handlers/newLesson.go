@@ -1,10 +1,15 @@
 package handlers
 
 import (
-	newlesson "langLearning/views/newLesson"
+	"langLearning/views/components"
+	"langLearning/views/newLesson"
 	"net/http"
 )
 
 func HandleServeNewLessonPage(w http.ResponseWriter, r *http.Request){
-	newlesson.NewLessonPage().Render(r.Context(), w)
+	newlesson.NewLessonPage([]string{"sd", "sdfk"}).Render(r.Context(), w)
+}
+
+func HandleNewLangForm(w http.ResponseWriter, r *http.Request){
+	components.NewLangForm().Render(r.Context(), w)
 }

@@ -150,6 +150,8 @@ func main(){
 	handler.HandleFunc("GET /", handleServeHomepage)
 	handler.HandleFunc("GET /newlesson", handlers.HandleServeNewLessonPage)
 
+	//API
+	handler.HandleFunc("POST /api/newlanguageform", handlers.HandleNewLangForm)
 	log.Printf("Server started on port %s\n", server.Addr)
 	log.Fatal(server.ListenAndServe())
 }

@@ -1,16 +1,37 @@
 package components
 
-templ NewLessonForm(){
-    <div>
+templ NewLessonForm(savedLanguages []string){
+    <div id="newLessonFormContainer">
         <form hx-post="/api/newlesson">
+            <label for="newLessionTitle">Title:</label>
             <input name="newLessionTitle" type="text" id="newLessionTitle" placeholder="Title" required />
             <br/>
-            <input name="newLessonLanguage" id="newLessonLanguage" placeholder="Language" required/>
+            <label for="newLessonLanguage">Language:</label>
+
+            if len(savedLanguages) == 0{
+                @NewLangForm()
+            }else{
+                <span>
+                    <select name="newLessonLanguage" id="newLessonLanguage">
+                        for _, lang := range savedLanguages{
+                            <option value={lang}>{lang}</option>
+                        }
+                    </select>
+
+                    <button type="button" hx-post="/api/newlanguageform" hx-target="closest span" hx-swap="outerhtml" >Add another language</button>
+                </span>
+            }
+
             <br/>
-            <textarea name="lessonTextArea" cols="80" rows="20" placeholder="Lesson text" required ></textarea>
+            <label for="newLessonText">Text:</label>
+            <textarea name="newLessonText" cols="80" rows="20" placeholder="Lesson text" required ></textarea>
             <br/>
-            //TODO: mahdollisuus upata tiedosto?
             <button>Add lesson</button>
         </form>
     </div>
+}
+//TODO: mahdollisuus upata tiedosto?
+
+templ NewLangForm(){
+    <input name="newLessonLanguage" id="newLessonLanguage" placeholder="Language" required/>
 }
